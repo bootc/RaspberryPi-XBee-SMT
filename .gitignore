@@ -1,8 +1,8 @@
-proj/*.[bs]#[0-9]
-proj/*.dri
-proj/*.G[BT][LOPS]
-proj/*.GML
-proj/*.gpi
-proj/*.gvp
-proj/*.TXT
+prj/*.[bs]#[0-9]
+prj/*.dri
+prj/*.G[BT][LOPS]
+prj/*.GML
+prj/*.gpi
+prj/*.gvp
+prj/*.TXT
 .*.swp
