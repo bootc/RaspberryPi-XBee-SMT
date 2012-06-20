@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -10990,6 +10990,8 @@ DIN A4, landscape with location and doc. field</description>
 <part name="U$3" library="SparkFun-Aesthetics" deviceset="CREATIVE_COMMONS" device=""/>
 <part name="JP1" library="raspberrypi" deviceset="RPI-EXPANSION" device=""/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
+<part name="SJ6" library="SparkFun-Passives" deviceset="SOLDERJUMPER" device="NO"/>
+<part name="P+5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11061,6 +11063,10 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="U$3" gate="G$1" x="5.08" y="5.08"/>
 <instance part="JP1" gate="G$1" x="55.88" y="147.32"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
+<instance part="SJ6" gate="1" x="25.4" y="162.56" smashed="yes">
+<attribute name="NAME" x="22.86" y="165.1" size="1.778" layer="95"/>
+</instance>
+<instance part="P+5" gate="G$1" x="17.78" y="165.1"/>
 </instances>
 <busses>
 </busses>
@@ -11219,6 +11225,12 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="127" y1="83.82" x2="127" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="G$1" pin="3.3V"/>
 <wire x1="127" y1="88.9" x2="127" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+5" gate="G$1" pin="3.3V"/>
+<wire x1="17.78" y1="165.1" x2="17.78" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="SJ6" gate="1" pin="1"/>
+<wire x1="17.78" y1="162.56" x2="20.32" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -11736,6 +11748,13 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="78.74" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <label x="83.82" y="137.16" size="1.778" layer="95"/>
 <pinref part="JP1" gate="G$1" pin="GPIO25"/>
+</segment>
+</net>
+<net name="RPI_3.3V" class="0">
+<segment>
+<pinref part="SJ6" gate="1" pin="2"/>
+<pinref part="JP1" gate="G$1" pin="3V3"/>
+<wire x1="30.48" y1="162.56" x2="33.02" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
