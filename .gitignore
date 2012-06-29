@@ -1,8 +1,8 @@
-prj/*.[bs]#[0-9]
-prj/*.dri
-prj/*.G[BT][LOPS]
-prj/*.GML
-prj/*.gpi
-prj/*.gvp
-prj/*.TXT
+prj/RaspberryPi-XBee-SMT/*.[bs]#[0-9]
+prj/RaspberryPi-XBee-SMT/*.dri
+prj/RaspberryPi-XBee-SMT/*.G[BT][LOPS]
+prj/RaspberryPi-XBee-SMT/*.GML
+prj/RaspberryPi-XBee-SMT/*.gpi
+prj/RaspberryPi-XBee-SMT/*.gvp
+prj/RaspberryPi-XBee-SMT/*.TXT
 .*.swp
